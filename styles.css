@@ -1,0 +1,241 @@
+:root {
+    --gradient-colors: #9181F4, #5038ED;
+  }
+
+html  {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+}
+body  {
+    margin: 0;
+    padding: 0;
+
+}
+h1{
+    font-size: 30px;
+}
+p{
+    font-size: 16px;
+}
+.bold {
+    font-weight: bold;
+}
+.login-page{
+    height: 100vh;
+    display: flex;
+}
+
+
+/*----------------login section---------------*/
+.login{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    text-align: center;
+}
+.login-container h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.section{
+    width: 50%;
+    height: 100%;
+}
+form{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+form input{
+    width: 314px;
+    height: 52px;
+    background-color: rgba(240, 237, 255, 80);
+    border-radius: 16px;
+    border: none;
+    
+    padding-left: 48px; 
+
+}
+form button{
+    background: linear-gradient(to right, var(--gradient-colors));
+    color: #ffff;
+    border:none;
+    border-radius: 16px;
+    width: 124px;
+    height: 52px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input::placeholder {
+    color: #1C1C1C;
+    font-style: normal; 
+    font-size: 12px;
+    position: absolute;
+    left: 48px; 
+}
+
+.input-wrapper .icon {
+    position: absolute;
+    top: 50%;
+    left: 18px; 
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.input-wrapper .username-icon{
+    background-image: url('./assets/username.png'); 
+
+}
+.input-wrapper .password-icon{
+    background-image: url('./assets/password.png'); 
+
+}
+
+
+
+
+
+.login-with-others{
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: inline-block;
+    
+   
+}
+.login-with-others::before,
+.login-with-others::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 112px;
+    height: 1px; 
+    background-color: #F0EDFF; 
+}
+
+.login-with-others::before {
+    left: 0;
+}
+
+.login-with-others::after {
+    right: 0;
+}
+.login-with-others button{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border:solid 1px #F0EDFF;
+    border-radius: 16px;
+    width: 364px;
+    height: 52px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    margin: 16px 0;
+}
+.login-with-others .icon {
+    display: inline-block;
+    width: 30px; 
+    height: 30px; 
+    margin-right: 6px; 
+
+}
+.lwo-google-icon {
+    background-image: url('./assets/google.png'); 
+}
+
+.lwo-Facebook-icon {
+    background-image: url('./assets/facebook.png');
+}
+
+
+/*----------------hero section---------------*/
+
+.hero{
+    position: relative;
+    background: linear-gradient(to left, var(--gradient-colors));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .bg-overlay {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/Rectangle\ 4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2; 
+}
+.hero .overlay {
+   background-color: rgba(255, 255, 255, 0.21);
+   width: 412px;
+   height: 524px;
+   border: solid 1px rgba(255, 255, 255, 0.52); ;
+   border-radius: 46px;
+   backdrop-filter: blur(7px);
+   z-index: 3;
+}
+
+.hero-text{
+    color: #FFFFFF;
+    width: 184px;
+    height: 230px;
+    margin: 26px;
+    
+}
+.woman-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -9px; 
+    margin-right: -115px; 
+    z-index: 5; 
+}
+.hero-icon {
+    width: 79px;
+    height: 79px;
+    position: absolute;
+    bottom: 98px;
+    left: -25px;
+
+    z-index: 5; 
+}
+
+
+
+@media (max-width: 900px) {
+    .login-page{
+        flex-direction: column;
+    }
+    .section{
+        width: 100%;
+    }
+}
